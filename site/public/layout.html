@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    function reflow() {
+      console.log('reflow');
+      const container = document.getElementById('root');
+      const div1 = document.createElement('div');
+      div1.innerHTML = 'hello';
+      container.appendChild(div1);
+      console.log(container.offsetHeight);
+      const div2 = document.createElement('div');
+      div2.innerHTML = 'world';
+      container.appendChild(div2);
+      requestAnimationFrame(reflow);
+    }
+    requestAnimationFrame(reflow);
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "lighthouse",
+  "version": "1.0.0",
+  "description": "lighthouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lighthouse": "lighthouse http://localhost:9090 --locale zh --quiet --chrome-flags='--headless' --only-categories=performance",
+    "dev": "nodemon ./src/index.js",
+    "site": "cd ./site && nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lotosv2010/lighthouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lotosv2010/lighthouse/issues"
+  },
+  "homepage": "https://github.com/lotosv2010/lighthouse#readme",
+  "dependencies": {
+    "chrome-launcher": "^0.15.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.2",
+    "koa": "^2.13.4",
+    "lighthouse": "^9.2.0",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0"
+  }
+}
